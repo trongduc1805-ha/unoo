@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNO - Đi đâu cũng được miễn là cùng nhau</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Patrick Hand"', 'cursive', 'sans-serif'],
+              heading: ['"Kalam"', 'cursive', 'sans-serif'],
+            },
+            colors: {
+              black: '#2d2d2d', // Pencil Black
+              paper: '#fdfbf7', // Warm Paper
+              pencil: '#2d2d2d',
+              marker: '#ff4d4d', // Red Marker Accent
+              ballpen: '#2d5da1', // Blue Accent
+              'muted-paper': '#e5e0d8',
+              neo: {
+                bg: '#fdfbf7',
+                fg: '#2d2d2d',
+                accent: '#ff4d4d', // Red
+                secondary: '#2d5da1', // Blue
+                muted: '#e5e0d8', // Eraser Pencil Gray
+                mint: '#22c55e', // Green
+              },
+              replit: {
+                bg: '#fdfbf7',
+                container: '#FFFFFF',
+                item: '#FFFFFF',
+                border: '#2d2d2d',
+                hover: '#ff4d4d',
+                text: '#2d2d2d',
+                'text-secondary': '#e5e0d8',
+              },
+              brand: {
+                red: '#ff4d4d',
+                yellow: '#2d5da1',
+                blue: '#2d5da1',
+              },
+              action: {
+                primary: '#2d5da1',
+                'primary-hover': '#1e40af',
+                secondary: '#e5e0d8',
+                'secondary-hover': '#d1cbbd',
+                destructive: '#ff4d4d',
+                'destructive-hover': '#dc2626',
+              },
+              status: {
+                positive: '#22c55e',
+                negative: '#ff4d4d',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.2s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(5px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fdfbf7;
+        color: #2d2d2d;
+        font-family: 'Patrick Hand', cursive, sans-serif;
+        background-image: radial-gradient(#e5e0d8 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+
+      /* Webkit-based browsers scrollbars */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #fdfbf7;
+        border-left: 2px solid #2d2d2d;
+        border-top: 2px solid #2d2d2d;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #2d2d2d;
+        border: 2px solid #fdfbf7;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff4d4d;
+      }
+
+      /* Halftone dot pattern background */
+      .bg-halftone {
+        background-image: radial-gradient(#e5e0d8 1.2px, transparent 1.2px);
+        background-size: 24px 24px;
+        background-color: #fdfbf7;
+      }
+
+      /* Graph paper grid pattern background */
+      .bg-graph-grid {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(45, 45, 45, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(45, 45, 45, 0.05) 1px, transparent 1px);
+        background-color: #fdfbf7;
+      }
+
+      /* Mechanical active push button styling */
+      .neo-btn-press {
+        transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .neo-btn-press:active {
+        transform: translate(4px, 4px) !important;
+        box-shadow: 0px 0px 0px 0px #2d2d2d !important;
+      }
+
+      /* Custom scroll hide */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Remove number input spinners */
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "framer-motion": "https://esm.sh/framer-motion@^11.0.0",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.8.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

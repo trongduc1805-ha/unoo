@@ -1,0 +1,6 @@
+{
+  "name": "UNO Bill Splitter",
+  "description": "A simple and elegant application to split bills among friends. Track expenses, settle up debts, and view your history effortlessly. Inspired by the classic card game for a fun, colorful interface.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
